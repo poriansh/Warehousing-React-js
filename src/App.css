@@ -8,4 +8,15 @@
   padding-inline: 10px;
   margin-inline: auto;
 }
+@layer components {
+  .btn{
+    @apply flex-1 rounded-xl py-2 cursor-pointer
+  }
+  .btn--primary{
+    @apply bg-slate-500 text-slate-200 
+  }
+  .btn--secondery{
+    @apply border  border-slate-400 text-slate-400
+  }
+}
     
