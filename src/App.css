@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+
+
+}
+@utility container {
+  padding-inline: 10px;
+  margin-inline: auto;
+}
+    
