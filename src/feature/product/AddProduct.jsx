@@ -14,9 +14,11 @@ function AddProduct({category, setproduct}) {
       title: title,
       quantity: quantity,
       category: categoryitem,
+      date : new Date().toISOString()
     };
     setproduct((prev) => [...prev, newProduct]);
     settitle("");
+    setquantity(0)
     
   };
   return (
@@ -37,7 +39,7 @@ function AddProduct({category, setproduct}) {
             id="quantity"
             type="number"
             value={quantity}
-            onChange={(e) => setquantity(Number(e.target.value))}
+            onChange={(e) => setquantity(e.target.value)}
           />
         </div>
         <div>
