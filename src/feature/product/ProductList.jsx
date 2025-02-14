@@ -1,6 +1,9 @@
 import toLocalDate from "../../utils/toLocalDate";
 
-function ProductList({product, handelDeleteProduct}) {
+function ProductList({product, setproduct}) {
+  const handelDeleteProduct = (id) => {
+    setproduct(product.filter((p) => p.id !== id));
+  };
   return (
     <div>
       <h2 className="text-xl text-slate-400 font-bold mb-4 border-b-slate-500 border-b">

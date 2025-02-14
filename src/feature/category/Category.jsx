@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
+import { useState} from "react";
 import Textfiald from "../../ui/Textfiald";
 
-function Category({category, setCategory}) {
+function Category({ setCategory}) {
   const [open, setOpen] = useState(false);
   const [title, settitle] = useState("");
   const [discription, setdiscription] = useState("");
@@ -14,14 +14,9 @@ function Category({category, setCategory}) {
       discription: discription,
     };
     setCategory((prevCategories) => [...prevCategories, newCategory]);
-
-    console.log(category);
     settitle("");
     setdiscription("");
   };
-  useEffect(() => {
-    console.log("بعد از آپدیت:", category); // مقدار جدید را بعد از آپدیت نمایش می‌دهد
-  }, [category]);
   return (
     <div>
       {open ? (

@@ -9,9 +9,7 @@ import Header from "./ui/Header";
 function App() {
   const [category, setCategory] = useLocalStorage("category", []);
   const [product, setproduct] = useLocalStorage("product", []);
-  const handelDeleteProduct = (id) => {
-    setproduct(product.filter((p) => p.id !== id));
-  };
+
   return (
     <div className="bg-slate-800 min-h-screen">
       <Header product={product} />
@@ -23,7 +21,7 @@ function App() {
           </div>
           <div className="grow flex gap-5 flex-col-reverse md:flex-col">
             <Filters category={category} />
-            <ProductList handelDeleteProduct={handelDeleteProduct} product={product} />
+            <ProductList setproduct={setproduct} product={product} />
           </div>
         </div>
       </div>

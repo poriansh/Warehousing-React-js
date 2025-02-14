@@ -1,8 +1,9 @@
-function Selector({ onChange, option}) {
+function Selector({ value,onChange, option}) {
   return (
     <select
       onChange={onChange}
       className="bg-transparent cursor-pointer focus:ring-0 focus:border-blue-800   focus:outline-none rounded-xl border-2 border-slate-500 text-slate-400 w-50 "
+      value={value}
     >
       <option className="bg-slate-500  text-slate-300" value="">
         select
