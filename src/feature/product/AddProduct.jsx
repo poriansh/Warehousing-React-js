@@ -5,10 +5,10 @@ import Selector from "../../ui/Selector";
 function AddProduct({category, setproduct}) {
   const [title, settitle] = useState("");
   const [quantity, setquantity] = useState(0);
-  const [categoryitem, setcategoryitem] = useState(category[0]?.title || "");
+  const [categoryitem, setcategoryitem] = useState("");
   const handelProduct = (e) => {
     e.preventDefault();
-    if (!title || quantity <= 0) return;
+    if (!title || quantity <= 0 || !categoryitem) return;
     const newProduct = {
       id: Date.now(),
       title: title,
@@ -19,6 +19,7 @@ function AddProduct({category, setproduct}) {
     setproduct((prev) => [...prev, newProduct]);
     settitle("");
     setquantity(0)
+    setcategoryitem("")
     
   };
   return (
