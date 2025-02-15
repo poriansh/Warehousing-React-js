@@ -15,7 +15,7 @@ function ProductList({product, setproduct}) {
             <div className="flex items-center justify-between mb-2 w-full">
               <span className="text-slate-400">{item.title}</span>
               <div className="flex items-center gap-x-3">
-                <span className="text-slate-400">{toLocalDate(item.date)}</span>
+                <span className="text-slate-400">{toLocalDate(item.createAt)}</span>
                 <span className="block px-3 pb-1 text-slate-400 border border-slate-400 text-sm/normal rounded-2xl">
                   {item.category}
                 </span>

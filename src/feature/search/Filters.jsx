@@ -1,7 +1,7 @@
 import Selector from "../../ui/Selector";
 import Textfiald from "../../ui/Textfiald";
 
-function Filters({category}) {
+function Filters({category, handelSearch, handlechengecategory, onchangeSort}) {
   const sort = [
     {
       title: "latest",
@@ -12,6 +12,7 @@ function Filters({category}) {
       value: "earliest",
     },
   ];
+
   return (
     <div>
       <h2 className="text-slate-500 font-bold mb-5 border-b-slate-500 border-b">Filters</h2>
@@ -20,19 +21,19 @@ function Filters({category}) {
           <label htmlFor="search-input" className="text-slate-500 text-lg">
             search
           </label>
-          <Textfiald type="text" id="search-input" />
+          <Textfiald onChange={handelSearch} type="text" id="search-input" />
         </div>
         <div className="flex  gap-20 items-center justify-between mb-6">
           <label htmlFor="sort-products" className="text-slate-500 text-lg">
             category
           </label>
-          <Selector option={category} />
+          <Selector onChange={handlechengecategory} option={category} />
         </div>
         <div className="flex  gap-20 items-center justify-between mb-6">
           <label htmlFor="sort-products" className="text-slate-500 text-lg">
             sort
           </label>
-          <Selector option={sort} />
+          <Selector onChange={onchangeSort} option={sort} />
         </div>
       </div>
     </div>

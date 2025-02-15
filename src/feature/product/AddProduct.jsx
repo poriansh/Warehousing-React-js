@@ -14,7 +14,7 @@ function AddProduct({category, setproduct}) {
       title: title,
       quantity: quantity,
       category: categoryitem,
-      date : new Date().toISOString()
+      createAt : new Date().toISOString()
     };
     setproduct((prev) => [...prev, newProduct]);
     settitle("");
